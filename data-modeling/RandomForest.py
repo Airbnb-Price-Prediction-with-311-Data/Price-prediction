@@ -3,7 +3,10 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 import numpy as np
 from sklearn.metrics import mean_squared_error
+<<<<<<< HEAD
 import csv
+=======
+>>>>>>> ef0d776de39377ad83967dcccbd63b9395764248
 
 airbnb_service_complaints = pd.read_csv("Airbnb_Service_complaints.csv")
 #f = open("Linear_Regression.txt", "x")
@@ -99,9 +102,10 @@ def airbnb_perservice():
     airbnb_subset = airbnb_service_complaints.copy()
     for col in columns:
         airbnb_subset.drop([col], axis=1, inplace=True)
-    airbnb_subset.drop(['latitude', 'longitude', 'count', 'total_count'], axis=1, inplace=True)
-    #print (airbnb_subset.columns)
     y = airbnb_service_complaints.price
+    airbnb_subset.drop(['latitude', 'longitude', 'count', 'total_count', 'price'], axis=1, inplace=True)
+    #print (airbnb_subset.columns)
+    
     for col in columns:
         row = []
         complaint = airbnb_service_complaints[col]
@@ -118,11 +122,6 @@ def airbnb_perservice():
         rows.append(row)
     complaints = {k: v for k, v in sorted(complaints.items(), key=lambda item: item[1])}
     print (complaints)   
-
-    with open(filename, 'w') as csvfile:
-        csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(fields)
-        csvwriter.writerows(rows)
 
 airbnb_allservices()
 airbnb_perservice()
