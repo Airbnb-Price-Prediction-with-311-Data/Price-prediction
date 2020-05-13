@@ -36,8 +36,8 @@ End with an example of getting some data out of the system or using it for a lit
 
 * Navigate to the data-cleaning directory to find the scripts that were used for preprocessing the respective datasets. 
 * Under 311-dataset-cleaning, the scripts clean.py and count_per_complaint_type.py directly perform actions on the original dataset which can be found on https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9 , it hasn't been added to this repository due to it's size ( greater than 7GB)
-* The pre-processed datasets can be found in the dataset directory.
-* The complaint_types.csv is the direct
+* The get_one_hot.py script, takes the count_by_incident_zip_complaint_type_2010.csv which contains relevant columns from the 311 dataset that were used for the project. 
+* The pre-processed datasets for both Airbnb and 311 service complaints dataset (Airbnb_processed2.csv and complaint_type2.csv) can be found in the dataset directory.
 
 ## Data Integration
 
