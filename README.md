@@ -1,10 +1,10 @@
-# Project Title
+# Effect of 311 service complaints on Airbnb Prices 
 
-One Paragraph of project description goes here
+The aim of this project is to predict Airbnb prices in NYC. We try to analyse the effect of 311 service complaints in a given zipcode on the Airbnb prices. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
