@@ -37,6 +37,8 @@ End with an example of getting some data out of the system or using it for a lit
 * Navigate to data-cleaning/ to find the scripts that were used for preprocessing the datasets. 
 * The 311 service complaint dataset hasn't been added to this repository since the dataset was greater than 7GB. 
 * The pre-processed datasets can be found in the dataset directory.
+* The two datasets, Airbnb and 311 service complaints were merged together on the zipcode.
+* The merged dataset that was used for feature selection and further pre-processing was the Airbnb_Service_complaints.csv
 
 ### Break down into end to end tests
 
