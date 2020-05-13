@@ -37,6 +37,7 @@ def airbnb_perservice():
 
     y = airbnb_service_complaints.price
     airbnb_subset.drop(['total_count', 'price'], axis=1, inplace=True)
+    print (airbnb_subset.columns)
     
     for col in columns:
         row = []
@@ -58,7 +59,7 @@ def airbnb_perservice():
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(fields)
         csvwriter.writerows(rows)
+    
 
-
-airbnb_allservices()
+#airbnb_allservices()
 airbnb_perservice()
