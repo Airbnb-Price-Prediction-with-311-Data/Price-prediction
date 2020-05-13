@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+
 ```
 
 ### Installing
@@ -32,9 +32,10 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Data Cleaning
 
-Explain how to run the automated tests for this system
+Navigate to dataset/ to find the scripts that were used for preprocessing the datasets. 
+The 311 service complaint dataset hasn't been added to this repository since the dataset was greater than 7GB. 
 
 ### Break down into end to end tests
 
