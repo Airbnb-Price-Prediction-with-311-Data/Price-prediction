@@ -36,5 +36,5 @@ drop_redundant_columns_rows(airbnb)
 airbnb["zipcode"] = get_zip(airbnb)
 format_values(airbnb)
 add_columns(airbnb)
-airbnb.to_csv('../../dataset/Airbnb_processed3.csv', index = False)
+airbnb.to_csv('../../dataset/Airbnb_processed.csv', index = False)
 

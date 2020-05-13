@@ -39,7 +39,7 @@ def make_subset():
     for x in airbnb_complaints.columns:
         if(x not in relevant_set):
             airbnb_complaints.drop([x],axis=1,inplace=True)
-    airbnb_complaints.to_csv('../dataset/reduced_data_rfe.csv', index=False)
+    airbnb_complaints.to_csv('results/reduced_data_rfe.csv', index=False)
 
 
 
