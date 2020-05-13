@@ -30,11 +30,11 @@ def add_columns(airbnb):
 
 
 
-airbnb = pd.read_csv("../Data/AB_NYC_2019.csv")
+airbnb = pd.read_csv("../../dataset/AB_NYC_2019.csv")
 remove_na(airbnb)
 drop_redundant_columns_rows(airbnb)
 airbnb["zipcode"] = get_zip(airbnb)
 format_values(airbnb)
 add_columns(airbnb)
-airbnb.to_csv('../Data/Airbnb_processed.csv', index = False)
+airbnb.to_csv('../../dataset/Airbnb_processed3.csv', index = False)
 
