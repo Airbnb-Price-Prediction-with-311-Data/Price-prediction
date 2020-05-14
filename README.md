@@ -39,6 +39,11 @@ End with an example of getting some data out of the system or using it for a lit
 * The get_one_hot.py script, takes the count_by_incident_zip_complaint_type_2010.csv which contains relevant columns from the 311 dataset that were used for the project. 
 * The pre-processed datasets for both Airbnb and 311 service complaints dataset (Airbnb_processed2.csv and complaint_type2.csv) can be found in the dataset directory.
 
+## Visualisations
+
+* Differrent visualisations on the processed datasets along with the enclosed code can be found in their respective directories. 
+* Tableau was also used to perform few visualisations on the Airbnb dataset.
+
 ## Data Integration
 
 * Navigate to the data-integration directory to find the script used for integration. 
