@@ -43,7 +43,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 * Navigate to the data-integration directory to find the script used for integration. 
 * The two datasets, Airbnb and 311 service complaints are merged using zipcode. 
-* This dataset can be found in the dataset directory labelled as Airbnb_Service_complaints.csv
+* This dataset can be found in the dataset directory labelled as Airbnb_Service_complaints_merged.csv
 
 ## Feature Selection
 
@@ -53,6 +53,19 @@ End with an example of getting some data out of the system or using it for a lit
     - Handpicking
     - Correlation
     - Forward- selection
+* The results for these can be found in the results directory containing csv files after performing the various feature selection techniques.
+
+## Data Modeling 
+
+* Several data modeling techniques such as:
+    - Linear Regresssion
+    - Ensemble Boost
+    - XgBoost
+    - Random Forest
+    - K-Nearest Neighbors
+
+* Results for the K-Nearest Neighbors have not been included due to the large amount of time taken to run it. 
+* The run_models.py script uses all the modeling techniques on all the feature selection methods that were tried in the previous section. 
 
 Explain what these tests test and why
 
