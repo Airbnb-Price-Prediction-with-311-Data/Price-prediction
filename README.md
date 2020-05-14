@@ -48,7 +48,11 @@ End with an example of getting some data out of the system or using it for a lit
 ## Feature Selection
 
 * Navigate to the feature-selection/ directory, several methods of feature-selection were used. 
-* 
+* The different methods are as follows:
+    - Recursive feature elimination
+    - Handpicking
+    - Correlation
+    - Forward- selection
 
 Explain what these tests test and why
 
