@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd 
 
 def get_subset():
-    count_by_complaint_type_and_zip = pd.read_csv('../../dataset/count_by_incident_zip_complaint_type_2010_to_2019.csv')
+    count_by_complaint_type_and_zip = pd.read_csv('../../dataset/count_by_incident_zip_complaint_type_2010.csv')
     count_by_complaint_type_and_zip.replace('-', '', regex=True)
     count_by_complaint_type = count_by_complaint_type_and_zip.groupby('Complaint_Type').Complaint_Type.count().reset_index(name="count")
     selected = count_by_complaint_type[count_by_complaint_type['count'] < 100]
@@ -22,7 +22,7 @@ def write_to_file(one_hot):
     one_hot = one_hot.astype({'Incident_Zip': str})
     for index, row in one_hot.iterrows():
         one_hot.at[index, 'Incident_Zip'] = str(row['Incident_Zip']).zfill(5) 
-    one_hot.to_csv('../../dataset/count_by_incident_zip_complaint_type_2010_to_2019_one_hot.csv', index=True)
+    one_hot.to_csv('../../dataset/complaint_types2.csv', index=True)
 
 
 count_by_complaint_type_and_zip = get_subset()
