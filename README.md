@@ -41,7 +41,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Visualisations
 
-* Differrent visualisations on the processed datasets along with the enclosed code can be found in their respective directories. 
+* Navigate to the visualisations directory to find the different visualisations on the processed datasets along with the scripts for the same. 
 * Tableau was also used to perform few visualisations on the Airbnb dataset.
 
 ## Data Integration
