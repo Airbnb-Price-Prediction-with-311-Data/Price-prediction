@@ -1,8 +1,5 @@
 import pandas as pd
 import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.feature_selection import RFE
@@ -11,7 +8,7 @@ from sklearn.metrics import mean_squared_error
 
 
 def make_subset(): 
-    airbnb_complaints = pd.read_csv('../dataset/Airbnb_Service_complaints.csv')
+    airbnb_complaints = pd.read_csv('../dataset/Airbnb_Service_complaints_merged.csv')
     numerical_features = airbnb_complaints.select_dtypes(exclude=['object'])
     y = numerical_features.price
     numerical_features.drop(['price'], axis=1, inplace=True)
@@ -39,7 +36,7 @@ def make_subset():
     for x in airbnb_complaints.columns:
         if(x not in relevant_set):
             airbnb_complaints.drop([x],axis=1,inplace=True)
-    airbnb_complaints.to_csv('results/reduced_data_rfe.csv', index=False)
+    airbnb_complaints.to_csv('results/reduced_data_rfe_v1.csv', index=False)
 
 
 

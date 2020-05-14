@@ -13,6 +13,7 @@ from allcolumns import columns
 
 #airbnb_service_complaints = pd.read_csv("../dataset/Airbnb_Service_complaints.csv")
 f=open("results/errors.csv", "a+")
+f.writelines("Method"+","+"model_name"+","+"RMSE"+"\n")
 
 def airbnb_allservices(filename, model ,ft_sel_name, model_name):
     airbnb_service_complaints = pd.read_csv(filename)
@@ -127,7 +128,7 @@ airbnb_allservices(filename, model, ft_sel_name, model_name)
 
 #Feature Selection - Forward Selection lowest 5 per complaint
 filename = "../feature-selection/results/forward_selection_top5_v1.csv"
-ft_sel_name = 'Forward Selection 5 lowest errors per service'
+ft_sel_name = 'Forward Selection(5)'
 
 model_name = 'Linear Regression'
 model = linear_model.LinearRegression()
@@ -147,7 +148,7 @@ airbnb_allservices(filename, model, ft_sel_name, model_name)
 
 #Feature Selection - Forward Selection lowest 10 per complaint
 filename = "../feature-selection/results/forward_selection_top10_v1.csv"
-ft_sel_name = 'Forward Selection 10 lowest errors per service'
+ft_sel_name = 'Forward Selection(10)'
 
 model_name = 'Linear Regression'
 model = linear_model.LinearRegression()
@@ -167,7 +168,7 @@ airbnb_allservices(filename, model, ft_sel_name, model_name)
 
 #Feature Selection - Forward Selection lowest 15 per complaint
 filename = "../feature-selection/results/forward_selection_top15_v1.csv"
-ft_sel_name = 'Forward Selection 15 lowest errors per service'
+ft_sel_name = 'Forward Selection(15)'
 
 model_name = 'Linear Regression'
 model = linear_model.LinearRegression()

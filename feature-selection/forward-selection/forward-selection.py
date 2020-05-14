@@ -51,25 +51,25 @@ def airbnb_perservice(model , filename):
 
 
 
-airbnb_service_complaints = pd.read_csv("../../dataset/Airbnb_Service_complaints.csv")
+airbnb_service_complaints = pd.read_csv("../../dataset/Airbnb_Service_complaints_merged.csv")
 
 #Linear regression
-filename = "results/linear_reg_error.csv"
+filename = "../results/linear_reg_error.csv"
 model = linear_model.LinearRegression()
 airbnb_perservice(model,filename)
 
 #Ensemble Boosting
-filename = "results/ensembleboosting_regressor_error.csv"
+filename = "../results/ensembleboosting_regressor_error.csv"
 model =  ensemble.GradientBoostingRegressor()
 airbnb_perservice(model,filename)
 
 #XGBoosting
-filename = "results/xgboost_regressor_error.csv"
+filename = "../results/xgboost_regressor_error.csv"
 model = xgb.XGBRegressor() 
 airbnb_perservice(model,filename)
 
 #Random Forest
-filename = "results/Random_forest_error.csv"
+filename = "../results/Random_forest_error.csv"
 model = RandomForestRegressor(max_depth=2, random_state=0)
 airbnb_perservice(model,filename)
 
