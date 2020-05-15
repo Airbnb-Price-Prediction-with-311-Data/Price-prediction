@@ -66,7 +66,7 @@ model = RandomForestRegressor(max_depth=2, random_state=0)
 airbnb_allservices(filename, model, ft_sel_name, model_name)
 
 #Feature Selection - Pearson Correlation
-filename = "../feature-selection/results/feature_selection_correlation_v1.csv"
+filename = "../feature-selection/results/feature_selection_correlation.csv"
 ft_sel_name = 'Filtering-Pearson Correlation'
 
 model_name = 'Linear Regression'
