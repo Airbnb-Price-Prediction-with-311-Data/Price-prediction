@@ -10,8 +10,8 @@ These instructions will get you a copy of the project up and running.
 
 Run the following commands inside the Price-prediction directory 
 ```
-pip install -r requirements.txt
-python app.py
+pip3 install -r requirements.txt
+python3 app.py
 ```
 The above will take about 30-40 mins for execute completely. 
 
