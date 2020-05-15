@@ -4,14 +4,13 @@ The aim of this project is to predict Airbnb prices in NYC. We try to analyse th
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions will get you a copy of the project up and running.
 
-### Prerequisites
+### Running the Project
 
-What things you need to install the software and how to install them
+Login to NYU High Performance Cluster Prince, make sure conda is installed and then run the sbatch script.
 
 ```
-conda env create -f req.yml
 sbatch runscript.s
 ```
 
