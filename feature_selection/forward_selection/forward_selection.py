@@ -9,7 +9,7 @@ from sklearn import datasets, linear_model
 from sklearn import ensemble
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.metrics import accuracy_score
-from allcolumns import columns
+from feature_selection.allcolumns import columns
 
 
 
@@ -23,7 +23,7 @@ def airbnb_perservice(model , filename):
     for col in columns:
         airbnb_subset.drop([col], axis=1, inplace=True)
 
-    print (airbnb_subset.columns)
+    #print (airbnb_subset.columns)
     y = airbnb_subset.price
     airbnb_subset.drop(['price', 'zipcode', 'total_count', 'name', 'host_name'], axis=1, inplace=True)
     for col in columns:
@@ -51,32 +51,33 @@ def airbnb_perservice(model , filename):
 
 
 
-airbnb_service_complaints = pd.read_csv("../../dataset/Airbnb_Service_complaints_merged.csv")
+def forward_selection_main():
+    
 
-#Linear regression
-filename = "../results/linear_reg_error.csv"
-model = linear_model.LinearRegression()
-airbnb_perservice(model,filename)
+    #Linear regression
+    filename = "feature_selection/results/linear_reg_error.csv"
+    model = linear_model.LinearRegression()
+    airbnb_perservice(model,filename)
 
-#Ensemble Boosting
-filename = "../results/ensembleboosting_regressor_error.csv"
-model =  ensemble.GradientBoostingRegressor()
-airbnb_perservice(model,filename)
+    #Ensemble Boosting
+    filename = "feature_selection/results/ensembleboosting_regressor_error.csv"
+    model =  ensemble.GradientBoostingRegressor()
+    airbnb_perservice(model,filename)
 
-#XGBoosting
-filename = "../results/xgboost_regressor_error.csv"
-model = xgb.XGBRegressor() 
-airbnb_perservice(model,filename)
+    #XGBoosting
+    filename = "feature_selection/results/xgboost_regressor_error.csv"
+    model = xgb.XGBRegressor() 
+    airbnb_perservice(model,filename)
 
-#Random Forest
-filename = "../results/Random_forest_error.csv"
-model = RandomForestRegressor(max_depth=2, random_state=0)
-airbnb_perservice(model,filename)
+    #Random Forest
+    filename = "feature_selection/results/Random_forest_error.csv"
+    model = RandomForestRegressor(max_depth=2, random_state=0)
+    airbnb_perservice(model,filename)
 
-#Knn pending 
-# filename = "results/linear_reg_error.csv"
-# model = linear_model.LinearRegression()
-# airbnb_perservice(model,filename)
+    #Knn pending 
+    # filename = "results/linear_reg_error.csv"
+    # model = linear_model.LinearRegression()
+    # airbnb_perservice(model,filename)
 
 
-
+airbnb_service_complaints = pd.read_csv("dataset/Airbnb_Service_complaints_merged.csv")

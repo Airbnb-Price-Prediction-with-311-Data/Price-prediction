@@ -4,23 +4,23 @@ import numpy as np
 ##This file was run 3 times to get top 5, 10 and 15 values per complaint type 
 def forward_selection_top5_percomplaint():
     chosen_complaints = []
-    airbnb_complaints = pd.read_csv('../../dataset/Airbnb_Service_complaints_merged.csv')
-    linear_reg = pd.read_csv("../results/linear_reg_error.csv")
+    airbnb_complaints = pd.read_csv('dataset/Airbnb_Service_complaints_merged.csv')
+    linear_reg = pd.read_csv("feature_selection/results/linear_reg_error.csv")
     top = linear_reg.sort_values('Error').head(15)
     for i in top.Complaint_type:
         chosen_complaints.append(i)
 
-    xgboost = pd.read_csv("../results/xgboost_regressor_error.csv")
+    xgboost = pd.read_csv("feature_selection/results/xgboost_regressor_error.csv")
     top = xgboost.sort_values('Error').head(15)
     for i in top.Complaint_type:
         chosen_complaints.append(i)
 
-    ensemble_boost = pd.read_csv("../results/ensembleboosting_regressor_error.csv")
+    ensemble_boost = pd.read_csv("feature_selection/results/ensembleboosting_regressor_error.csv")
     top = ensemble_boost.sort_values('Error').head(15)
     for i in top.Complaint_type:
         chosen_complaints.append(i)
 
-    random_forest = pd.read_csv("../results/Random_forest_error.csv")
+    random_forest = pd.read_csv("feature_selection/results/Random_forest_error.csv")
     top = random_forest.sort_values('Error').head(15)
     for i in top.Complaint_type:
         chosen_complaints.append(i)
@@ -34,6 +34,6 @@ def forward_selection_top5_percomplaint():
         if(x not in relevant_set):
             airbnb_complaints.drop([x],axis=1,inplace=True)
     #airbnb_complaints.to_csv('results/wrapper_topfromeach_top5.csv')
-    airbnb_complaints.to_csv('../results/forward_selection_top15.csv')
+    airbnb_complaints.to_csv('feature_selection/results/forward_selection_top15.csv')
 
-forward_selection_top5_percomplaint()
+#forward_selection_top5_percomplaint()

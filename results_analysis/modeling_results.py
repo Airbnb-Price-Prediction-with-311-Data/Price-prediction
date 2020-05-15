@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def get_graph():
-    errors_file = pd.read_csv('../data-modeling/results/errors.csv')
+    errors_file = pd.read_csv('data_modeling/results/errors.csv')
     x = ['LinearReg', 'EnsembleBoost', 'XgBoost', 'Random Forest']
     y_errors = []
     y_errors = errors_file.loc[errors_file['Method'] == 'None', 'RMSE']
@@ -17,8 +17,8 @@ def get_graph():
     plot = sns.scatterplot(x=x, y=y_features,color=color,s=100,ax=ax)
     plot = sns.lineplot(x=x, y=y_features,sort=False, color=color,ax=ax)
     fig1 = plot.get_figure()
-    fig1.savefig("modeling_baselinevsforward.png")
+    fig1.savefig("results_analysis/images/modeling_baselinevsforward.png")
     plot.get_figure().clf()
     
-get_graph()
+#get_graph()
 

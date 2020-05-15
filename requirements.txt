@@ -1,0 +1,7 @@
+numpy
+pandas
+seaborn
+sklearn
+xgboost
+uszipcode
+matplotlib

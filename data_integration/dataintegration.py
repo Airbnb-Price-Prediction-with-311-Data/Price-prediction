@@ -13,4 +13,4 @@ def merge_datasets():
       df_merge_complaint_types = pd.merge(airbnb_complaints, df_complaint_types, on='zipcode', how='inner')
       df_merge_complaint_types.to_csv(r'dataset/Airbnb_Service_complaints_merged.csv', index = False)
 
-merge_datasets()
+#merge_datasets()

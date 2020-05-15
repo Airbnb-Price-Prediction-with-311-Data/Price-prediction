@@ -1,0 +1,34 @@
+from data_cleaning.airbnb_cleaning import get_zip_codes
+from data_cleaning.airbnb_cleaning import clean
+from data_cleaning.dataset_cleaning_311 import complaints_only_311
+from data_visualisation.airbnb_visualisation import visualise_airbnb 
+from data_integration import dataintegration
+from feature_selection import handpicking
+from feature_selection import correlation
+from feature_selection import rfe
+from feature_selection import allcolumns
+from feature_selection.forward_selection import forward_selection
+from feature_selection.forward_selection import forward_selection_intersection
+from feature_selection.forward_selection import forward_selection_topcomplaints
+from feature_selection.forward_selection import allcolumns
+from data_modeling import run_models
+from results_analysis import featureselection_results
+from results_analysis import modeling_results
+
+
+clean.airbnb_clean()
+count_by_complaint_type_and_zip = complaints_only_311.get_subset()
+one_hot = complaints_only_311.get_one_hot(count_by_complaint_type_and_zip)
+complaints_only_311.write_to_file(one_hot)
+visualise_airbnb.visualise_main()
+dataintegration.merge_datasets()
+handpicking.make_subset()
+correlation.make_subset()
+rfe.make_subset()
+forward_selection.forward_selection_main()
+forward_selection_intersection.feature_selection_intersection()
+forward_selection_topcomplaints.forward_selection_top5_percomplaint()
+run_models.run_models_main()
+featureselection_results.plot_graph()
+modeling_results.get_graph()
+

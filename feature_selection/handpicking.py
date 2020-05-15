@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 def make_subset():
-    airbnb_complaints = pd.read_csv('../dataset/Airbnb_Service_complaints_merged.csv')
+    airbnb_complaints = pd.read_csv('dataset/Airbnb_Service_complaints_merged.csv')
     
     relevant_features =['APPLIANCE', 'Air Quality', 'Beach/Pool/Sauna Complaint',  'Blocked Driveway', 'Collection Truck Noise',
     'Construction', 'Construction Lead Dust', 'Consumer Complaint', 'DOOR/WINDOW', 'Damaged Tree', 'Dead Tree', 'Dead/Dying Tree',
@@ -21,7 +21,7 @@ def make_subset():
         if(x not in relevant_set):
             airbnb_complaints.drop([x],axis=1,inplace=True)
     #airbnb_complaints.to_csv('../dataset/wrapper_topfromeach_top5.csv')
-    airbnb_complaints.to_csv('results/feature_selection_handpicking.csv')
+    airbnb_complaints.to_csv('feature_selection/results/feature_selection_handpicking.csv')
     
 
-make_subset()
+#make_subset()

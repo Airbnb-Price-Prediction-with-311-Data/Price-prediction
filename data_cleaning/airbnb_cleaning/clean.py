@@ -26,4 +26,4 @@ def airbnb_clean():
     airbnb['no_reviews'] = airbnb['reviews_per_month']==0
     airbnb.to_csv('dataset/Airbnb_processed.csv', index = False)
 
-airbnb_clean()
+#airbnb_clean()

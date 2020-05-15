@@ -9,7 +9,7 @@ def get_subset():
     count_by_complaint_type_and_zip = count_by_complaint_type_and_zip[~count_by_complaint_type_and_zip['Complaint_Type'].isin(selected.Complaint_Type)]
     return count_by_complaint_type_and_zip
 
-def get_one_hot():
+def get_one_hot(count_by_complaint_type_and_zip):
     total = count_by_complaint_type_and_zip.groupby('Incident_Zip')['count'].sum()
     one_hot = pd.pivot_table(count_by_complaint_type_and_zip,index='Incident_Zip',columns=['Complaint_Type'],values='count',aggfunc=np.sum,fill_value=0)
     one_hot['total_count']=total
@@ -25,6 +25,7 @@ def write_to_file(one_hot):
     one_hot.to_csv('dataset/complaint_type.csv', index=True)
 
 
-count_by_complaint_type_and_zip = get_subset()
-one_hot = get_one_hot()
-write_to_file(one_hot)
+
+#count_by_complaint_type_and_zip = get_subset()
+#one_hot = get_one_hot()
+#write_to_file(one_hot)
