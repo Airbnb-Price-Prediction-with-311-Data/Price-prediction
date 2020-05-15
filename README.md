@@ -97,11 +97,11 @@ $ hdfs dfs -put 311_data_no_headers.csv Data
 5. Connect to beeline as described https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Dumbo 
 
 6. Run the sql queries in the beeline folder in the follwing order:
-- createSchema.sql
-- count_per_zip.sql   
-- avg_complaint_coords.sql                                    
-- least_common_complaint.sql      
-- top_complaints.sql
+    - createSchema.sql
+    - count_per_zip.sql   
+    - avg_complaint_coords.sql                                    
+    - least_common_complaint.sql      
+    - top_complaints.sql
    
 
 
