@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
 from uszipcode import SearchEngine, SimpleZipcode, Zipcode
-from get_zip_codes import get_zip
+from data_cleaning.airbnb_cleaning.get_zip_codes import get_zip
 
 def airbnb_clean():
-    airbnb = pd.read_csv("../../dataset/AB_NYC_2019.csv")
+    airbnb = pd.read_csv("dataset/AB_NYC_2019.csv")
     airbnb['name'].fillna("$", inplace=True)
     airbnb['host_name'].fillna("#", inplace=True)
     #airbnb['reviews_per_month'].fillna(0, inplace=True)
@@ -23,6 +23,6 @@ def airbnb_clean():
     airbnb['all_year_avail'] = airbnb['availability_365']>353
     airbnb['low_avail'] = airbnb['availability_365']< 12
     airbnb['no_reviews'] = airbnb['reviews_per_month']==0
-    airbnb.to_csv('../../dataset/Airbnb_processed.csv', index = False)
+    airbnb.to_csv('dataset/Airbnb_processed.csv', index = False)
 
 airbnb_clean()
