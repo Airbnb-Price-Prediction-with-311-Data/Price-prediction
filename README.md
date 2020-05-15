@@ -21,6 +21,9 @@ Alternatively, login to NYU High Performance Cluster Prince, make sure conda is 
 sbatch runscript.s
 ```
 The visualisation under results-analysis do not get created after running the job on Prince due to some compatibility issues in the packages, however the scripts and results can be found in the results-analysis directory. 
+
+The project structure is described below.
+
 ## Data Cleaning 
 
 * Navigate to the data-cleaning directory to find the scripts that were used for preprocessing the respective datasets. 
