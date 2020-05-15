@@ -29,6 +29,4 @@ forward_selection.forward_selection_main()
 forward_selection_intersection.feature_selection_intersection()
 forward_selection_topcomplaints.forward_selection_top5_percomplaint()
 run_models.run_models_main()
-featureselection_results.plot_graph()
-modeling_results.get_graph()
 
