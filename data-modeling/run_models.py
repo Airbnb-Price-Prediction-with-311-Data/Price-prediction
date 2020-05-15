@@ -46,7 +46,7 @@ model = RandomForestRegressor(max_depth=2, random_state=0)
 airbnb_allservices(filename, model, ft_sel_name, model_name)
 
 #Feature Selection - Hand Picking
-filename = "../feature-selection/results/feature_selection_handpicking_v1.csv"
+filename = "../feature-selection/results/feature_selection_handpicking.csv"
 ft_sel_name = 'Hand-Picking'
 
 model_name = 'Linear Regression'
@@ -107,7 +107,7 @@ model = RandomForestRegressor(max_depth=2, random_state=0)
 airbnb_allservices(filename, model, ft_sel_name, model_name)
 
 #Feature Selection - Forward Selection Intersection
-filename = "../feature-selection/results/forward_selection_intersection_v1.csv"
+filename = "../feature-selection/results/forward_selection_intersection.csv"
 ft_sel_name = 'Forward Selection Intersection'
 
 model_name = 'Linear Regression'
@@ -127,7 +127,7 @@ model = RandomForestRegressor(max_depth=2, random_state=0)
 airbnb_allservices(filename, model, ft_sel_name, model_name)
 
 #Feature Selection - Forward Selection lowest 5 per complaint
-filename = "../feature-selection/results/forward_selection_top5_v1.csv"
+filename = "../feature-selection/results/forward_selection_top5.csv"
 ft_sel_name = 'Forward Selection(5)'
 
 model_name = 'Linear Regression'
@@ -147,7 +147,7 @@ model = RandomForestRegressor(max_depth=2, random_state=0)
 airbnb_allservices(filename, model, ft_sel_name, model_name)
 
 #Feature Selection - Forward Selection lowest 10 per complaint
-filename = "../feature-selection/results/forward_selection_top10_v1.csv"
+filename = "../feature-selection/results/forward_selection_top10.csv"
 ft_sel_name = 'Forward Selection(10)'
 
 model_name = 'Linear Regression'
@@ -167,7 +167,7 @@ model = RandomForestRegressor(max_depth=2, random_state=0)
 airbnb_allservices(filename, model, ft_sel_name, model_name)
 
 #Feature Selection - Forward Selection lowest 15 per complaint
-filename = "../feature-selection/results/forward_selection_top15_v1.csv"
+filename = "../feature-selection/results/forward_selection_top15.csv"
 ft_sel_name = 'Forward Selection(15)'
 
 model_name = 'Linear Regression'
@@ -186,30 +186,5 @@ model_name = 'Random Forest'
 model = RandomForestRegressor(max_depth=2, random_state=0)
 airbnb_allservices(filename, model, ft_sel_name, model_name)
 
-
-'''
-'None',
-'Random Forest',  0.3542529602630437],
-'Hand-picking', 'Linear Regression', 0.32840295063492975],
-'Hand-picking', 'Ensemble',  0.2879174248843924],
-'Hand-picking', 'XgBoost', 0.26716510577877184],
-'Hand-picking', 'Knn', 0.3502145678340426],
-'Hand-picking', 'Random Forest',0.3454682291378386],
-'Filtering-Pearson Correlation', 'Linear Regression', 0.34407488516971496],
-'Filtering-Pearson Correlation', 'Ensemble',  0.31453265423990917],
-'Filtering-Pearson Correlation', 'XgBoost', 0.3189341080740337],
-'Filtering-Pearson Correlation', 'Knn', 0.36908935549907823],
-'Filtering-Pearson Correlation', 'Random Forest', 0.34487450246348667],
-'Recursive Feature Elimination', 'Linear Regression', 0.32445242176847816],
-'Recursive Feature Elimination', 'Ensemble',  0.2866705382171408],
-'Recursive Feature Elimination', 'XgBoost', 0.27889186411391176],
-'Recursive Feature Elimination', 'Knn', 0.35582669478689205],
-'Recursive Feature Elimination', 'Random Forest', 0.3439807657381468],
-'Forward Selection', 'Linear Regression', 0.3531028136181348],
-'Forward Selection', 'Ensemble',  0.2852983178404548],
-'Forward Selection', 'XgBoost', 0.27508785316309353],
-'Forward Selection', 'Knn', 0.3434047632654581],
-'Forward Selection', 'Random Forest', 0.3518038106524232],
-'''
 
 

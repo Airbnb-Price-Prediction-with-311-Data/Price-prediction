@@ -21,7 +21,7 @@ def make_subset():
         if(x not in relevant_set):
             airbnb_complaints.drop([x],axis=1,inplace=True)
     #airbnb_complaints.to_csv('../dataset/wrapper_topfromeach_top5.csv')
-    airbnb_complaints.to_csv('results/feature_selection_handpicking_v1.csv')
+    airbnb_complaints.to_csv('results/feature_selection_handpicking.csv')
     
 
 make_subset()
