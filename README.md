@@ -76,45 +76,19 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Results Analysis
 
-* The following graphs shows the root mean squared error values for the various feature selection techniques for all the models that were implemented in the feature-selection section of the project. 
-* We found forward selection to be the best feature selection technique for this project. 
-* Boosting in general gave the least root mean squared error values. 
+* This section contains key findings from our project. 
 
 ![Feature Selection Comparsion](results-analysis/images/featureselectioncomparison.png)
 
+* The above graph shows the root mean squared error values for the various feature selection techniques for all the models that were implemented in the feature-selection section of the project. 
+* We found forward selection to be the best feature selection technique for this project. 
+* Boosting in general gave the least root mean squared error values. 
+
 ![Feature Selection Comparsion](results-analysis/images/modeling_baselinevsforward.png)
 
+* The above graph shows the root mean squared error values for the baseline Airbnb model vs the root mean squared values (represented by the line plot) for our best feature selection technique. 
+* We find that boosting performs the best amongst all the models tried. 
 
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
@@ -122,9 +96,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
