@@ -7,8 +7,13 @@ def get_graph():
     x = ['LinearReg', 'EnsembleBoost', 'XgBoost', 'Random Forest']
     y_errors = []
     y_errors = errors_file.loc[errors_file['Method'] == 'None', 'RMSE']
+    print ("basline")
+    print (y_errors)
     y_errors_feature = []
-    y_errors_feature = errors_file.loc[errors_file['Method'] == 'Forward Selection 10 lowest errors per service', 'RMSE']
+    y_errors_feature = errors_file.loc[errors_file['Method'] == 'Forward Selection(15)', 'RMSE']
+    print ("forwasrd")
+    print (y_errors_feature)
+    
     y = y_errors
     y_features = y_errors_feature
     color = 'tab:green'
@@ -19,6 +24,6 @@ def get_graph():
     fig1 = plot.get_figure()
     fig1.savefig("modeling_baselinevsforward.png")
     plot.get_figure().clf()
-
+    
 get_graph()
 
