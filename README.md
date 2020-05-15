@@ -72,7 +72,6 @@ sbatch runscript.s
 * We find that boosting performs the best amongst all the models tried. 
 
 ## Beeline Instructions
-* Beeline 
 1. Download the file:
 $ wget https://data.cityofnewyork.us/api/views/dbhh-68ph/rows.csv?accessType=DOWNLOAD
 
