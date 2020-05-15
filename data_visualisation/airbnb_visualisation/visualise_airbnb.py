@@ -14,7 +14,7 @@ def corr_kendall(airbnb):
     plt.figure(figsize=(15,8))
     heat_map = sns.heatmap(corr, annot=True)
     fig1 = heat_map.get_figure()
-    fig1.savefig("images/correlation-heatmap-kendall.png")
+    fig1.savefig("data_visualisation/airbnb_visualisation/images/correlation-heatmap-kendall.png")
     heat_map.get_figure().clf()
 
 
@@ -23,7 +23,7 @@ def corr_pearson(airbnb):
     plt.figure(figsize=(15,8))
     heat_map = sns.heatmap(corr, annot=True)
     fig2 = heat_map.get_figure()
-    fig2.savefig("images/correlation-heatmap-pearson.png")
+    fig2.savefig("data_visualisation/airbnb_visualisation/images/correlation-heatmap-pearson.png")
     heat_map.get_figure().clf()
 
 
@@ -33,7 +33,7 @@ def corr_spearman(airbnb):
     plt.figure(figsize=(15,8))
     heat_map = sns.heatmap(corr, annot=True)
     fig3 = heat_map.get_figure()
-    fig3.savefig("images/correlation-heatmap-spearman.png")
+    fig3.savefig("data_visualisation/airbnb_visualisation/images/correlation-heatmap-spearman.png")
     heat_map.get_figure().clf()
 
 
@@ -43,7 +43,7 @@ def neighbourhood_group_vs_count(airbnb):
     fig4 = plt.gcf()
     fig4.set_size_inches(10,10)
     plt.title('Neighbourhood Group')
-    fig4.savefig("images/neighbourhood-group-vs-count.png")
+    fig4.savefig("data_visualisation/airbnb_visualisation/images/neighbourhood-group-vs-count.png")
     countplot.get_figure().clf()
 
 
@@ -52,7 +52,7 @@ def room_type_vs_count(airbnb):
     fig5 = plt.gcf()
     fig5.set_size_inches(10,10)
     plt.title('Room Type')
-    fig5.savefig("images/room-type-vs-count.png")
+    fig5.savefig("data_visualisation/airbnb_visualisation/images/room-type-vs-count.png")
     countplot.get_figure().clf()
 
 
@@ -62,7 +62,7 @@ def neighbourhood_vs_count(airbnb):
     fig6 = plt.gcf()
     fig6.set_size_inches(60,15)
     plt.title('Neighbourhood')
-    fig6.savefig("images/neighbourhood-vs-count.png")
+    fig6.savefig("data_visualisation/airbnb_visualisation/images/neighbourhood-vs-count.png")
     ax.get_figure().clf()
 
 
@@ -71,16 +71,17 @@ def calculated_host_listings_vs_count(airbnb):
     fig7 = plt.gcf()
     fig7.set_size_inches(10,5)
     plt.title('Calculated Host Listings Count')
-    fig7.savefig("images/calculated-host-listings-vs-count.png")
+    fig7.savefig("data_visualisation/airbnb_visualisation/images/calculated-host-listings-vs-count.png")
     countplot.get_figure().clf()
 
 
-airbnb = pd.read_csv('../../dataset/AB_NYC_2019.csv')
-clean_data(airbnb)
-corr_kendall(airbnb)
-corr_pearson(airbnb)
-corr_spearman(airbnb)
-neighbourhood_group_vs_count(airbnb)
-room_type_vs_count(airbnb)
-neighbourhood_vs_count(airbnb)
-calculated_host_listings_vs_count(airbnb)
+def visualise_main():
+    airbnb = pd.read_csv('dataset/AB_NYC_2019.csv')
+    clean_data(airbnb)
+    corr_kendall(airbnb)
+    corr_pearson(airbnb)
+    corr_spearman(airbnb)
+    neighbourhood_group_vs_count(airbnb)
+    room_type_vs_count(airbnb)
+    neighbourhood_vs_count(airbnb)
+    calculated_host_listings_vs_count(airbnb)
