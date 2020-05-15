@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 
+##This file was run 3 times to get top 5, 10 and 15 values per complaint type 
 def forward_selection_top5_percomplaint():
     chosen_complaints = []
     airbnb_complaints = pd.read_csv('../../dataset/Airbnb_Service_complaints_merged.csv')
@@ -24,17 +25,6 @@ def forward_selection_top5_percomplaint():
     for i in top.Complaint_type:
         chosen_complaints.append(i)
 
-    # knn = pd.read_csv("../../data-modeling/Results_per_complaint/knn_error.csv")
-    # top = knn.sort_values('Error').head(5)
-    # for i in top.Complaint_type:
-    #     chosen_complaints.append(i)
-
-
-    # relevant_features = ['FLOORING/STAIRS', 'APPLIANCE','WATER LEAK','ELECTRIC','GENERAL','Root/Sewer/Sidewalk Condition','Street Light Condition','Beach/Pool/Sauna Complaint',
-    # 'Senior Center Complaint','Water System','Borough Office','UNSANITARY CONDITION','Abandoned Vehicle', 'Mold','Highway Condition','Panhandling','Electrical',
-    # 'Special Projects Inspection Team (SPIT)','Missed Collection','UNSANITARY CONDITION','Noise - House of Worship','Illegal Parking' , 'Air Quality','Quality of Life',
-    # 'Urinating in Public', 'id', 'name', 'host_id', 'host_name', 'neighbourhood_group','neighbourhood', 'latitude', 'longitude', 'room_type', 'price',
-    # 'minimum_nights', 'number_of_reviews', 'last_review','reviews_per_month', 'calculated_host_listings_count','availability_365'] 
     airbnb_features = ['id', 'name', 'host_id', 'host_name', 'neighbourhood_group','neighbourhood', 'latitude', 'longitude', 'room_type', 'price',
     'minimum_nights', 'number_of_reviews', 'last_review','reviews_per_month', 'calculated_host_listings_count','availability_365'] 
     chosen_complaints.extend(airbnb_features)
