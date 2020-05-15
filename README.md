@@ -75,8 +75,10 @@ End with an example of getting some data out of the system or using it for a lit
 * These scripts are present in the models directory for reference, however these need not be run as a part of the project. 
 
 ## Results Analysis
-Explain what these tests test and why
+
 ![Feature Selection Comparsion](results-analysis/images/featureselectioncomparison.png)
+
+![Feature Selection Comparsion](results-analysis/images/modeling_baselinevsforward.png)
 
 
 
