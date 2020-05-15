@@ -8,12 +8,19 @@ These instructions will get you a copy of the project up and running.
 
 ## Running the Project
 
-Login to NYU High Performance Cluster Prince, make sure conda is installed and then run the sbatch script.
+Run the following commands inside the Price-prediction directory 
+```
+pip install -r requirements.txt
+python app.py
+```
+The above will take about 30-40 mins for execute completely. 
+
+Alternatively, login to NYU High Performance Cluster Prince, make sure conda is installed and then run the sbatch script.
 
 ```
 sbatch runscript.s
 ```
-
+The visualisation under results-analysis do not get created after running the job on Prince due to some compatibility issues in the packages, however the scripts and results can be found in the results-analysis directory. 
 ## Data Cleaning 
 
 * Navigate to the data-cleaning directory to find the scripts that were used for preprocessing the respective datasets. 
