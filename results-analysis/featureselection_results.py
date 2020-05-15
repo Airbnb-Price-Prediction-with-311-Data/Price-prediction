@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 def plot_graph():
     errors_file = pd.read_csv('../data-modeling/results/errors.csv')
+    print (errors_file.dtypes)
     sns.set(style="whitegrid")
     g = sns.catplot(x="Method", y="RMSE", hue="model_name",kind="bar",data=errors_file, palette="bright",height=7, aspect=3)
     g.despine(left=True)

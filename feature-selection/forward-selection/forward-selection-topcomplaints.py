@@ -34,6 +34,6 @@ def forward_selection_top5_percomplaint():
         if(x not in relevant_set):
             airbnb_complaints.drop([x],axis=1,inplace=True)
     #airbnb_complaints.to_csv('results/wrapper_topfromeach_top5.csv')
-    airbnb_complaints.to_csv('../results/forward_selection_top15_v1.csv')
+    airbnb_complaints.to_csv('../results/forward_selection_top15.csv')
 
 forward_selection_top5_percomplaint()
