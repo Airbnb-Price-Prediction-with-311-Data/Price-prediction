@@ -60,13 +60,13 @@ sbatch runscript.s
 
 * This section contains key findings from our project. 
 
-![Feature Selection Comparsion](results-analysis/images/featureselectioncomparison.png)
+![Feature Selection Comparsion](results_analysis/images/featureselectioncomparison.png)
 
 * The above graph shows the root mean squared error values for the various feature selection techniques for all the models that were implemented in the feature-selection section of the project. 
 * We found forward selection to be the best feature selection technique for this project. 
 * Boosting in general gave the least root mean squared error values. 
 
-![Feature Selection Comparsion](results-analysis/images/modeling_baselinevsforward.png)
+![Feature Selection Comparsion](results_analysis/images/modeling_baselinevsforward.png)
 
 * The above graph shows the root mean squared error values for the baseline Airbnb model vs the root mean squared values (represented by the line plot) for our best feature selection technique. 
 * We find that boosting performs the best amongst all the models tried. 
