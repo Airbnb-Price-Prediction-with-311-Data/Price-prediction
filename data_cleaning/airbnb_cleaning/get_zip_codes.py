@@ -1,4 +1,5 @@
 #%pip install uszipcode
+import uszipcode
 from uszipcode import SearchEngine, SimpleZipcode, Zipcode
 
 def get_zip(airbnb):

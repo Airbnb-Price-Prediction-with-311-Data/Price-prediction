@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import uszipcode
 from uszipcode import SearchEngine, SimpleZipcode, Zipcode
 from data_cleaning.airbnb_cleaning.get_zip_codes import get_zip
 
