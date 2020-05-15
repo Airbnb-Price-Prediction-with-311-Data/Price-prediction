@@ -13,7 +13,7 @@ Run the following commands inside the Price-prediction directory
 pip3 install -r requirements.txt
 python3 app.py
 ```
-The above will take about 30-40 mins for execute completely. 
+The above will take about 30-40 mins to execute completely. 
 
 Alternatively, login to NYU High Performance Cluster Prince, make sure conda is installed and then run the sbatch script.
 
