@@ -68,7 +68,7 @@ End with an example of getting some data out of the system or using it for a lit
     - XgBoost
     - Random Forest
     - K-Nearest Neighbors
-* Results for the K-Nearest Neighbors have not been included due to the large amount of time taken to run it. 
+* Results for the K-Nearest Neighbors have not been included due to the large amount of time taken to run it, however the script that was used is present in the models directory.  
 * The run_models.py script uses all the modeling techniques on all the feature selection methods that were tried in the previous section. 
 * The resultant csv which contains RMSE values for each model for each of the feature selection techniques could be found in the results directory as the "errors.csv".
 * We ran the scripts for each of the models individually to generate a csv per model which gave the RMSE per complaint type, these results were used in the forward selection technique under feature-selection. 
