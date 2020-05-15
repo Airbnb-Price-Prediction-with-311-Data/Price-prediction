@@ -58,7 +58,6 @@ End with an example of getting some data out of the system or using it for a lit
     - Handpicking
     - Correlation
     - Forward- selection
-    
 * The results for these can be found in the results directory containing csv files after performing the various feature selection techniques.
 
 ## Data Modeling 
@@ -69,7 +68,6 @@ End with an example of getting some data out of the system or using it for a lit
     - XgBoost
     - Random Forest
     - K-Nearest Neighbors
-
 * Results for the K-Nearest Neighbors have not been included due to the large amount of time taken to run it. 
 * The run_models.py script uses all the modeling techniques on all the feature selection methods that were tried in the previous section. 
 
