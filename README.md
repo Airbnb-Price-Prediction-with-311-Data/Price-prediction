@@ -71,7 +71,7 @@ sbatch runscript.s
 * The above graph shows the root mean squared error values for the baseline Airbnb model vs the root mean squared values (represented by the line plot) for our best feature selection technique. 
 * We find that boosting performs the best amongst all the models tried. 
 
-## Other Tools Explored 
+## Beeline Instructions
 * Beeline 
 1. Download the file:
 $ wget https://data.cityofnewyork.us/api/views/dbhh-68ph/rows.csv?accessType=DOWNLOAD
@@ -88,6 +88,11 @@ $ hdfs dfs -put 311_data_no_headers.csv Data
 5. Connect to beeline as described https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Dumbo 
 
 6. Run the sql queries in the beeline folder in the follwing order:
-   --
+- createSchema.sql
+- count_per_zip.sql   
+- avg_complaint_coords.sql                                    
+- least_common_complaint.sql      
+- top_complaints.sql
+   
 
-* Rapid Miner 
+
