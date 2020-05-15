@@ -26,7 +26,7 @@ def airbnb_allservices(filename, model ,ft_sel_name, model_name):
     f.writelines(ft_sel_name+","+model_name+","+str(mean_squared_error(y_test, y_pred))+"\n")
 
 #Feature Selection - None
-filename = "../dataset/Airbnb_processed_try_1.csv"
+filename = "../dataset/Airbnb_processed.csv"
 ft_sel_name = 'None'
 
 model_name = 'Linear Regression'

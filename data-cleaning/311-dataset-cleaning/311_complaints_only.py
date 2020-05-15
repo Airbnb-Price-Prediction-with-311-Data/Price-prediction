@@ -22,7 +22,7 @@ def write_to_file(one_hot):
     one_hot = one_hot.astype({'Incident_Zip': str})
     for index, row in one_hot.iterrows():
         one_hot.at[index, 'Incident_Zip'] = str(row['Incident_Zip']).zfill(5) 
-    one_hot.to_csv('../../dataset/complaint_types2.csv', index=True)
+    one_hot.to_csv('../../dataset/complaint_type.csv', index=True)
 
 
 count_by_complaint_type_and_zip = get_subset()

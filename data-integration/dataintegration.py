@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def merge_datasets():
-      airbnb_complaints = pd.read_csv('../dataset/Airbnb_processed_try_1.csv')
+      airbnb_complaints = pd.read_csv('../dataset/Airbnb_processed.csv')
       df_complaint_types = pd.read_csv("../dataset/complaint_type.csv")
       for index, row in df_complaint_types.iterrows():
             df_complaint_types.at[index, 'Incident_Zip'] = str(row['Incident_Zip']).zfill(5)
