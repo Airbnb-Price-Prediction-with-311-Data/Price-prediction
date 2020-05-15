@@ -76,6 +76,10 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Results Analysis
 
+* The following graphs shows the root mean squared error values for the various feature selection techniques for all the models that were implemented in the feature-selection section of the project. 
+* We found forward selection to be the best feature selection technique for this project. 
+* Boosting in general gave the least root mean squared error values. 
+
 ![Feature Selection Comparsion](results-analysis/images/featureselectioncomparison.png)
 
 ![Feature Selection Comparsion](results-analysis/images/modeling_baselinevsforward.png)
