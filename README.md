@@ -70,6 +70,8 @@ End with an example of getting some data out of the system or using it for a lit
     - K-Nearest Neighbors
 * Results for the K-Nearest Neighbors have not been included due to the large amount of time taken to run it. 
 * The run_models.py script uses all the modeling techniques on all the feature selection methods that were tried in the previous section. 
+* We ran the scripts for each of the models individually to generate a csv per model which gave the RMSE per complaint type, these results were used in the forward selection technique under feature-selection. 
+* These scripts are present in the directory, however these need not be run as a part of the project. 
 
 ## Results Analysis
 Explain what these tests test and why
