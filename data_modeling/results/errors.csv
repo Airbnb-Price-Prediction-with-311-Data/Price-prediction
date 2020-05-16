@@ -1,0 +1,33 @@
+Method,model_name,RMSE
+None,Linear Regression,0.3818986980980733
+None,Ensemble,0.2989947668817223
+None,XgBoost,0.2719939483049344
+None,Random Forest,0.3531960009083464
+Hand-Picking,Linear Regression,0.3254777368584784
+Hand-Picking,Ensemble,0.28713788772647786
+Hand-Picking,XgBoost,0.27558871244489314
+Hand-Picking,Random Forest,0.3472532051961499
+Filtering-Pearson Correlation,Linear Regression,0.3424412326644761
+Filtering-Pearson Correlation,Ensemble,0.3293725410906306
+Filtering-Pearson Correlation,XgBoost,0.3181875003812211
+Filtering-Pearson Correlation,Random Forest,0.35249443484783377
+Recursive Feature Elimination,Linear Regression,0.3346425459962528
+Recursive Feature Elimination,Ensemble,0.3041433244083223
+Recursive Feature Elimination,XgBoost,0.2979016256362185
+Recursive Feature Elimination,Random Forest,0.35272250350163387
+Forward Selection Intersection,Linear Regression,0.35108766731671753
+Forward Selection Intersection,Ensemble,0.28896580136815286
+Forward Selection Intersection,XgBoost,0.2788822564759131
+Forward Selection Intersection,Random Forest,0.35718640174020977
+Forward Selection(5),Linear Regression,0.34322980132754366
+Forward Selection(5),Ensemble,0.28344928573934525
+Forward Selection(5),XgBoost,0.27691777939189954
+Forward Selection(5),Random Forest,0.35083066266444213
+Forward Selection(10),Linear Regression,0.3407961727391409
+Forward Selection(10),Ensemble,0.29030491071846404
+Forward Selection(10),XgBoost,0.28067049510093667
+Forward Selection(10),Random Forest,0.34629343695182685
+Forward Selection(15),Linear Regression,0.33469928568025914
+Forward Selection(15),Ensemble,0.2856640508452308
+Forward Selection(15),XgBoost,0.26840901078190793
+Forward Selection(15),Random Forest,0.3358158486956156
