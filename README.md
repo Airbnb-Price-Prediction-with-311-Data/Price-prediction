@@ -12,8 +12,9 @@ Run the following commands inside the Price-prediction directory
 ```
 pip3 install -r requirements.txt
 python3 app.py
+python3 app_visualisations.py
 ```
-The above will take about 30-40 mins to execute completely. 
+The above will take about 30-40 mins to execute completely. The resultant visualisations can be found in the results-analysis directory. 
 
 Alternatively, login to NYU High Performance Cluster Prince, make sure conda is installed and then run the sbatch script.
 
